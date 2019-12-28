@@ -7,14 +7,14 @@
 """
 
 from tkinter import Entry, Label, StringVar, Tk, Listbox, Scrollbar, Button, END
-import paramiko
+from paramiko import SSHClient, AutoAddPolicy
 
 
 def view_command():
     server_response.delete(0, END)
     # Connect to remote host
-    client = paramiko.SSHClient()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    client = SSHClient()
+    client.set_missing_host_key_policy(AutoAddPolicy())
     client.connect(host_text.get(), username=uname_text.get(), password=password_text.get())
 
     # SSHClient.exec_command() returns the tuple (stdin,stdout,stderr)
