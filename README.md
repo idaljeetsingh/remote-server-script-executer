@@ -8,7 +8,7 @@ A GUI based python applet to execute a shell script stored on a remote server an
 # Requirements:
 
 	    
-	    * A SSH enabled remote server that has a valid shell script stored at any location with permission to execute the script.
+	    * A SSH enabled remote server.
 	    
 
 # Usage:
