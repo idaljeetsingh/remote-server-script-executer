@@ -15,7 +15,7 @@ class Executer(QtWidgets.QMainWindow):
     def __init__(self):
         super(Executer, self).__init__()
         uic.loadUi('Executer.ui', self)
-        # self.setWindowIcon(QtGui.QIcon("icon.png"))
+        self.setWindowIcon(QtGui.QIcon("icon.png"))
         self.execute_button.clicked.connect(self.execute_button_clicked)
         self.script_entry.returnPressed.connect(self.get_script_file)
         self.clear_button.clicked.connect(self.clear_button_clicked)
